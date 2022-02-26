@@ -13,3 +13,6 @@
         </div>
     </div>
 </div>
+<ul>
+    <li><?= $mhs['anime'] ?></li>
+</ul>
