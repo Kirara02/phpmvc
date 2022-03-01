@@ -28,7 +28,7 @@ class App {
         }
 
         // params
-        if (!empty($url[1])){
+        if (!empty($url)){
             $this->params = array_values($url);
         }
 

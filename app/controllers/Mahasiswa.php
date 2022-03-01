@@ -8,7 +8,6 @@ class Mahasiswa extends Controller{
         $this->view('templates/footer');
     }
     public function detail($id){
-        var_dump($id);
         $data['judul'] = 'Detail Mahasiswa';
         $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaById($id);
         $this->view('templates/header', $data);
