@@ -1,23 +1,23 @@
 <?php 
 class Mahasiswa_model {
-    private $table = 'Mahasiswa';
+    private $table = 'waifu';
     private $db;
     public function __construct()
     {
         $this->db = new Database;
     }
     
-    public function getAllMahasiswa(){
-        $this->db->query('SELECT * FROM '.$this->table);
+    public function getAllWaifu(){
+        $this->db->query("SELECT * FROM $this->table");
         return $this->db->resultSet();
     }
-    public function getMahasiswaById($id){
+    public function getWaifuById($id){
         $this->db->query("SELECT * FROM  $this->table WHERE id='$id'");
         return $this->db->single();
     }
-    public function tambahDataMahasiswa($data){
-        $query = "INSERT Into mahasiswa VALUES
-                    (:anime, :nama, :umur, :status) ";
+    public function tambahDataWaifu($data){
+        $query = "INSERT Into $this->table VALUES
+                    ('', :anime, :nama, :umur, :status) ";
         
         $this->db->query($query);
         $this->db->bind('anime', $data['anime']);
