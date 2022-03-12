@@ -20,4 +20,7 @@ class Waifu extends Controller{
         $this->view('waifu/input', $data);
         $this->view('templates/footer');
     }
+    public function tambah(){
+        var_dump($_POST);
+    }
 }
