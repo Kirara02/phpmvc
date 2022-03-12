@@ -51,10 +51,7 @@ class Database {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
-<<<<<<< HEAD
     public function rowCount(){
         return $this->stmt->rowCount();
     }
-=======
->>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b
 }
