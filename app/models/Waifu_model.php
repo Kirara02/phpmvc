@@ -1,6 +1,10 @@
 <?php 
 class Mahasiswa_model {
     private $table = 'waifu';
+<<<<<<< HEAD:app/models/Mahasiswa_model.php
+=======
+>>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b
+>>>>>>> c3d6c64b49415dc7205518c10adb840824ca717f:app/models/Waifu_model.php
     private $db;
     public function __construct()
     {
@@ -29,4 +33,8 @@ class Mahasiswa_model {
 
         return $this->db->rowCount();
     }
+<<<<<<< HEAD:app/models/Mahasiswa_model.php
 }
+=======
+}
+>>>>>>> c3d6c64b49415dc7205518c10adb840824ca717f:app/models/Waifu_model.php
