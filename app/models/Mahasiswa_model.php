@@ -1,7 +1,6 @@
 <?php 
 class Mahasiswa_model {
     private $table = 'waifu';
-
     private $db;
     public function __construct()
     {

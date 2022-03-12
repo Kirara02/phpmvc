@@ -1,5 +1,4 @@
 
-
     <h1>My about</h1>
     <img src="<?= BASEURL ?>/img/profil.png" alt="Kirara" width="400" class="rounded-circle">
     <p>
