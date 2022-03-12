@@ -1,4 +1,9 @@
 <div class="container w-50 mt-3">
+    <div class="row">
+        <div class="col-lg-6">
+            <?= Flasher::flash(); ?>
+        </div>
+    </div>
     <form action="<?= BASEURL ?>/waifu/tambah" method="post">
         <div class="mb-3 w-50">
             <label for="exampleInput1" class="form-label">Anime </label>

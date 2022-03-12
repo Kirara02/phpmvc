@@ -22,6 +22,11 @@ class Waifu extends Controller{
     }
     public function tambah(){
         if($this->model('Mahasiswa_model')->tambahDataWaifu($_POST)>0){
+            Flasher::setFlash('Berhasil', 'ditambahkan', 'success');
+            header ('location: '. BASEURL . '/waifu');
+            exit;
+        }else {
+            Flasher::setFlash('Gagal', 'ditambahkan', 'danger');
             header ('location: '. BASEURL . '/waifu');
             exit;
         }
