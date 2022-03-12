@@ -1,13 +1,11 @@
 <?php 
 
 class App {
-<<<<<<< HEAD
-    protected $controller = 'Home';
-    protected $method = 'Index';
-=======
+
+
     protected $controller = 'home';
     protected $method = 'index';
->>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b
+
     protected $params = [];
 
     public function __construct() {
@@ -28,10 +26,6 @@ class App {
             if(method_exists($this->controller, $url[1])){
                 $this->method = $url[1];
                 unset($url[1]);
-<<<<<<< HEAD
-                
-=======
->>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b
             }
         }
 
@@ -52,8 +46,5 @@ class App {
             return $url;
         }
     }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b

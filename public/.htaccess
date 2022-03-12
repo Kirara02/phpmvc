@@ -1,8 +1,4 @@
 Options -Multiviews
-<<<<<<< HEAD
-=======
-
->>>>>>> 13e5bc6a7bbc9d3d6ed51f3465fe633bff69b06b
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
