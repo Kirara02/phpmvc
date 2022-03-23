@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
+        <div class="col-6"> 
             <h3>Daftar Waifu</h3>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#formModal">
@@ -55,14 +55,17 @@
                 </div>
                 <div class="form-group w-50">
                     <label for="umur">Umur</label>
-                    <input type="number" name="umur" id="umur" class="form-control>
+                    <input type="number" name="umur" id="umur" class="form-control">
                 </div>
                 <div class="form-group w-50">
                     <label for="status">Status</label>
-                    <input type="text" name="status" id="status" class="form-control>">
+                    <input type="text" name="status" id="status" class="form-control">
                 </div>
-                <div class="mt-3">
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Tambah data</button>
+                </div>  
             </form>
         </div>
     </div>
