@@ -42,9 +42,9 @@ class Mahasiswa_model {
         $sql = "UPDATE mahasiswa SET nama = :nama, anime = :anime, umur = :umur, status = :status WHERE id = :id";
         $this->db->query($sql);
         $this->db->bind(":nama", $data["nama"]);
-        $this->db->bind(":nrp", $data["anime"]);
-        $this->db->bind(":email", $data["umur"]);
-        $this->db->bind(":jurusan", $data["status"]);
+        $this->db->bind(":anime", $data["anime"]);
+        $this->db->bind(":umur", $data["umur"]);
+        $this->db->bind(":status", $data["status"]);
         $this->db->bind(":id", $data["id"]);
 
         $this->db->execute();
