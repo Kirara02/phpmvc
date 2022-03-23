@@ -14,12 +14,6 @@ class Waifu extends Controller{
         $this->view('waifu/detail', $data);
         $this->view('templates/footer');
     }
-    public function input(){
-        $data['judul'] = 'Input Waifu';
-        $this->view('templates/header', $data);
-        $this->view('waifu/input', $data);
-        $this->view('templates/footer');
-    }
     public function tambah(){
         if($this->model('Mahasiswa_model')->tambahDataWaifu($_POST)>0){
             Flasher::setFlash('Berhasil', 'ditambahkan', 'success');
@@ -28,6 +22,17 @@ class Waifu extends Controller{
         }else {
             Flasher::setFlash('Gagal', 'ditambahkan', 'danger');
             header ('location: '. BASEURL . '/waifu');
+            exit;
+        }
+    }
+    public function hapus($id){
+        if($this->model('Mahasiswa_model')->hapusWaifu($id)>0){
+            Flasher::setFlash('Berhasil','dihapus','success');
+            header ('location: '.BASEURL. '/waifu');
+            exit;
+        }else{
+            Flasher::setFlash('Gagal','dihapus','danger');
+            header ('location: '.BASEURL. '/waifu');
             exit;
         }
     }
