@@ -36,11 +36,26 @@ class Waifu extends Controller{
             exit;
         }
     }
-    public function edit($id){
-        $data['judul'] = "Edit Waifu";
-        $data['mhs'] = $this->model('Mahasiswa_model')->getWaifuById($id);
-        $this->view('templates/header',$data);
-        $this->view('waifu/edit', $data);
-        $this->view('templates/footer');
+    public function getUbah() {
+        echo JSON_encode($this->model("Mahasiswa_model")->getWaifuById($_POST["id"]));
+    }
+
+    public function ubah() {
+        if ($this->model("Mahasiswa_model")->ubahDataWaifu($_POST) > 0) {
+            Flasher::setFlash("Berhasil!", "Data berhasil diubah", "success");
+            header("Location:" . BASEURL . "waifu");
+            exit;
+        } else {
+            Flasher::setFlash("Gagal!", "Data gagal diubah", "danger");
+            header("Location:" . BASEURL . "waifu");
+            exit;
+        }       
+    }
+    public function cari(){
+        $data["judul"] = "Daftar Mahasiswa";
+        $data["mhs"] = $this->model("Mahasiswa_model")->cariDataWaifu();
+        $this->view("templates/header", $data);
+        $this->view("mahasiswa/index", $data);
+        $this->view("templates/footer");
     }
 }

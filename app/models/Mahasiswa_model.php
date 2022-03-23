@@ -35,10 +35,27 @@ class Mahasiswa_model {
         $this->db->bind('id',$id);
         
         $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
+    public function ubahDataWaifu($data) {
+        $sql = "UPDATE mahasiswa SET nama = :nama, anime = :anime, umur = :umur, status = :status WHERE id = :id";
+        $this->db->query($sql);
+        $this->db->bind(":nama", $data["nama"]);
+        $this->db->bind(":nrp", $data["anime"]);
+        $this->db->bind(":email", $data["umur"]);
+        $this->db->bind(":jurusan", $data["status"]);
+        $this->db->bind(":id", $data["id"]);
+
+        $this->db->execute();
 
         return $this->db->rowCount();
     }
-    public function editWaifu($id){
-        
+    public function cariDataWaifu() {
+        $keyword = $_POST["keyword"];
+        $sql = "SELECT * FROM mahasiswa WHERE nama LIKE :keyword";
+        $this->db->query($sql);
+        $this->db->bind(":keyword", "%$keyword%");
+        return $this->db->resultSet();
     }
 }
