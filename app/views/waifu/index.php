@@ -8,7 +8,7 @@
         <div class="col-6">
             <h3>Daftar Waifu</h3>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#formModal">
                 Tambah Data Waifu
                 </button>
             </div>
@@ -17,7 +17,7 @@
                 <li class="list-group-item ">
                     <?= $mhs['nama'] ?>
                     <a href="<?= BASEURL ?>/waifu/detail/<?= $mhs['id']?>" class="badge bg-primary float-right">detail</a>
-                    <a href="<?= BASEURL ?>/waifu/edit/<?= $mhs['id']?>" class="badge bg-success float-right">edit</a>
+                    <a href="<?= BASEURL ?>/waifu/edit/<?= $mhs['id']?>" class="badge bg-success">edit</a>
                     <a href="<?= BASEURL ?>/waifu/hapus/<?= $mhs['id']?>" class="badge bg-danger float-right" 
                     onclick="return confirm('yakin?')">hapus</a>
                 </li>
@@ -27,11 +27,11 @@
     </div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tambah Data Waifu</h5>
+        <h5 class="modal-title" id="formModalLabel">Tambah Data Waifu</h5>
         <button type="button" class="btn-close" data-bs-dismiss= "modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

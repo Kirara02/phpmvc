@@ -38,4 +38,7 @@ class Mahasiswa_model {
 
         return $this->db->rowCount();
     }
+    public function editWaifu($id){
+        
+    }
 }

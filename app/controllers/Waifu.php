@@ -36,4 +36,11 @@ class Waifu extends Controller{
             exit;
         }
     }
+    public function edit($id){
+        $data['judul'] = "Edit Waifu";
+        $data['mhs'] = $this->model('Mahasiswa_model')->getWaifuById($id);
+        $this->view('templates/header',$data);
+        $this->view('waifu/edit', $data);
+        $this->view('templates/footer');
+    }
 }
