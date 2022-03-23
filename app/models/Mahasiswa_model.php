@@ -53,7 +53,7 @@ class Mahasiswa_model {
     }
     public function cariDataWaifu() {
         $keyword = $_POST["keyword"];
-        $sql = "SELECT * FROM mahasiswa WHERE nama LIKE :keyword";
+        $sql = "SELECT * FROM waifu WHERE nama LIKE :keyword";
         $this->db->query($sql);
         $this->db->bind(":keyword", "%$keyword%");
         return $this->db->resultSet();
