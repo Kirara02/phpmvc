@@ -45,6 +45,7 @@
             </div>
             <div class="modal-body">
             <form action="<?= BASEURL ?>/waifu/tambah" method="post">
+                <input type="hidden" name="id" id="id">
                 <div class="form-group">
                     <label for="anime">Anime</label>
                     <input type="text" name="anime" id="anime" class="form-control">

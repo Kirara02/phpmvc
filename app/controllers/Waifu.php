@@ -43,11 +43,11 @@ class Waifu extends Controller{
     public function ubah() {
         if ($this->model("Mahasiswa_model")->ubahDataWaifu($_POST) > 0) {
             Flasher::setFlash("Berhasil!", "Data berhasil diubah", "success");
-            header("Location:" . BASEURL . "waifu");
+            header("Location:" . BASEURL . "/waifu");
             exit;
         } else {
             Flasher::setFlash("Gagal!", "Data gagal diubah", "danger");
-            header("Location:" . BASEURL . "waifu");
+            header("Location:" . BASEURL . "/waifu");
             exit;
         }       
     }

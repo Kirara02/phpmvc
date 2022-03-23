@@ -39,8 +39,8 @@ class Mahasiswa_model {
         return $this->db->rowCount();
     }
     public function ubahDataWaifu($data) {
-        $sql = "UPDATE mahasiswa SET nama = :nama, anime = :anime, umur = :umur, status = :status WHERE id = :id";
-        $this->db->query($sql);
+        $query = "UPDATE waifu SET nama = :nama, anime = :anime, umur = :umur, status = :status WHERE id = :id";
+        $this->db->query($query);
         $this->db->bind(":nama", $data["nama"]);
         $this->db->bind(":anime", $data["anime"]);
         $this->db->bind(":umur", $data["umur"]);
