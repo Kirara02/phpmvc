@@ -37,7 +37,7 @@ class Waifu extends Controller{
         }
     }
     public function getUbah() {
-        echo JSON_encode($this->model("Mahasiswa_model")->getWaifuById($_POST["id"]));
+        echo JSON_encode($this->model("Mahasiswa_model")->getWaifuById($_POST['id']));
     }
 
     public function ubah() {
@@ -52,10 +52,10 @@ class Waifu extends Controller{
         }       
     }
     public function cari(){
-        $data["judul"] = "Daftar Mahasiswa";
+        $data["judul"] = "Daftar Waifu";
         $data["mhs"] = $this->model("Mahasiswa_model")->cariDataWaifu();
         $this->view("templates/header", $data);
-        $this->view("mahasiswa/index", $data);
+        $this->view("waifu/index", $data);
         $this->view("templates/footer");
     }
 }

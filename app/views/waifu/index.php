@@ -3,17 +3,18 @@
     <div class="col-lg-6">
         <?= Flasher::flash(); ?>
     </div>
-    <div class="row mb-3">
-        <div class="col-6">
-            <form action="<?= BASEURL ?>mahasiswa/cari" method="POST">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="cari waifu" name="keyword" id="keyword" autocomplete="off">
-                    <button class="btn btn-outline-primary" type="submit" id="cari">Cari</button>
-                </div>
-            </form>
-        </div>
+</div>
+<div class="row mb-3">
+    <div class="col-6">
+        <form action="<?= BASEURL ?>/waifu/cari" method="POST">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="cari waifu" name="keyword" id="keyword" autocomplete="off">
+                <button class="btn btn-outline-primary" type="submit" id="cari">Cari</button>
+            </div>
+        </form>
     </div>
-    <div class="row">
+</div>
+<div class="row">
         <div class="col-6"> 
             <h3>Daftar Waifu</h3>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -23,7 +24,7 @@
             </div>
             <ul class="list-group">
                 <?php foreach($data['mhs'] as $mhs) : ?>
-                <li class="list-group-item ">
+                <li class="list-group-item">
                     <?= $mhs['nama'] ?>
                     <a href="<?= BASEURL ?>/waifu/detail/<?= $mhs['id']?>" class="badge bg-primary float-end mx-2">detail</a>
                     <a href="<?= BASEURL ?>/waifu/edit/<?= $mhs["id"] ?>" class="badge bg-success float-end mx-2 tampilModalUbah" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs["id"] ?>">Edit</a>           
@@ -33,14 +34,13 @@
                 <?php endforeach ?>
             </ul>
         </div>
-    </div>
 </div>
 
 <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="judulModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="formModalLabel">Tambah data Waifu</h5>
+                <h5 class="modal-title formModalLabel" id="formModalLabel">Tambah data Waifu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
